@@ -4,5 +4,9 @@ class Upload < ActiveRecord::Base
 	validates_attachment 	:image, 
 				:presence => true,
 				:content_type => { :content_type => /\Aimage\/.*\Z/ },
-				:size => { :less_than => 1.megabyte }
+				:size => { :less_than => 2.megabyte }
+
+	def image_url
+		image.url
+	end
 end

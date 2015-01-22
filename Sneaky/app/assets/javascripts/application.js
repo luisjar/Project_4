@@ -28,5 +28,33 @@ var App = {
 	Models: {}, 
 	Collections: {}, 
 	Views: {}, 
-	Routers: {}
+	Routers: {},
+	initialize: function() {
+		console.log('first hi');
+		App.images = new App.Collections.imageCollection();
+		App.imageCollectionView = new App.Views.imageCollectionView({ collection:App.images});
+		App.images.fetch({reset: true});
+
+	 x = document.getElementById("demo");
+		// window.onload = function() {
+			function getLocation() {
+    	if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+   	  } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    	}
+		}
+		function showPosition(position) {
+			var lat = position.coords.latitude;
+			var long = position.coords.longitude;
+    	x.innerHTML = "Latitude: " + lat + 
+    	"<br>Longitude: " + long; 
+		}
+		getLocation();
+	}
 };
+
+$(function() {
+	App.initialize();
+});
+

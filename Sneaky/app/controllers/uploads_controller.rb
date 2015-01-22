@@ -1,4 +1,9 @@
 class UploadsController < ApplicationController
+
+  def index
+    render json: Upload.all.to_json(:methods => [:image_url])
+  end
+
   def new
   	@upload = Upload.new
   end

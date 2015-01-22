@@ -8,10 +8,29 @@
 </head>
 <body>
 
+<%= yield %>
+<h1>Geolocation</h1>
+<p id="demo"></p>
 
-<div class="container">
-	<%= yield %>
+<div id="upload-image-section">
+	<h1>Upload an image</h1>
+	<div id="upload"></div>
 </div>
+<hr>
+<div id="collection-section">
+	<h1>Images section</h1>
+	<div id="image-gallery"></div>
+</div>
+<hr>
+<div id="map-section">
+	<h1>Map Section</h1>
+	<div id="map"></div>
+</div>
+
+
+
+
+
 
 </body>
 </html>

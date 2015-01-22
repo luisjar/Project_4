@@ -15,3 +15,8 @@
  *= require dropzone
  *= require_tree .
  */
+
+ .user-image {
+ 	margin: 5px;
+ 	
+ }
