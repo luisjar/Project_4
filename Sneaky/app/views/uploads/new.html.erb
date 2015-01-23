@@ -3,6 +3,8 @@
     <%= f.file_field :image %><br>
     <%= f.submit "Upload" %>
   </div>
+  <%= f.hidden_field(:latitude) %>
+  <%= f.hidden_field(:longitude)%>
 <% end %>
  
 <br>

@@ -35,7 +35,7 @@ var App = {
 		App.imageCollectionView = new App.Views.imageCollectionView({ collection:App.images});
 		App.images.fetch({reset: true});
 
-	 x = document.getElementById("demo");
+	 x = $("#demo")[0];
 		// window.onload = function() {
 			function getLocation() {
     	if (navigator.geolocation) {
@@ -49,9 +49,14 @@ var App = {
 			var long = position.coords.longitude;
     	x.innerHTML = "Latitude: " + lat + 
     	"<br>Longitude: " + long; 
+
+    	$('#upload_latitude').attr('value', lat)
+    	$('#upload_longitude').attr('value', long)
 		}
-		getLocation();
+		getLocation()
 	}
+
+
 };
 
 $(function() {

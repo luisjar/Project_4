@@ -9,4 +9,11 @@ class Upload < ActiveRecord::Base
 	def image_url
 		image.url
 	end
+
+	def calculate_distance(lat, long)
+		R = 6371
+		x = (self.latitude-lat) * Math.cos((long+self.longitude)/2)
+		y = (self.longitude-long)
+		Math.sqrt(x*x + y*y) * R
+	end
 end
