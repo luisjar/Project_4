@@ -1,4 +1,14 @@
 class Upload < ActiveRecord::Base
+	# geocoded_by :ip_address,
+ #  	:latitude => :lat, :longitude => :lon
+	# after_validation :geocode
+
+	# geocoded_by :address
+	# after_validation :geocode
+
+	reverse_geocoded_by :latitude, :longitude
+	after_validation :reverse_geocode  # auto-fetch address
+
 	has_attached_file :image, :styles => { :medium => "300x300>",:thumb => "100x100>" }
 	
 	validates_attachment 	:image, 
@@ -9,11 +19,5 @@ class Upload < ActiveRecord::Base
 	def image_url
 		image.url
 	end
-
-	def calculate_distance(lat, long)
-		R = 6371
-		x = (self.latitude-lat) * Math.cos((long+self.longitude)/2)
-		y = (self.longitude-long)
-		Math.sqrt(x*x + y*y) * R
-	end
 end
+

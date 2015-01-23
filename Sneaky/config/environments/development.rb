@@ -40,4 +40,9 @@ Rails.application.configure do
     :bucket => ENV['S3_BUCKET']
   }
 }
+class ActionDispatch::Request
+    def ip
+      "72.229.28.185"
+    end
+end
 end

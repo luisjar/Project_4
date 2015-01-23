@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAmMQFkMpdhfV5AFYNHPfap2qOCjmQiMo8
+    &q=<%= request.location.latitude %>, <%= request.location.longitude %>">
+</iframe>
+
+
 <div id="upload-image-section">
 	<h1>Upload an image</h1>
 <%= yield %>

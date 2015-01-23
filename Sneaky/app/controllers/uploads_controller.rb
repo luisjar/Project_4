@@ -1,7 +1,11 @@
 class UploadsController < ApplicationController
 
   def index
-    render json: Upload.all.to_json(:methods => [:image_url])
+
+    @uploads = Upload.near([request.location.latitude, request.location.longitude], 1)
+
+    # render json: Upload.all.to_json(:methods => [:image_url])
+    render json: @uploads.to_json(:methods => [:image_url])
   end
 
   def new
