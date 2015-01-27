@@ -47,3 +47,4 @@ gem "rails-assets-backbone", source: "https://rails-assets.org"
 gem 'aws-sdk'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'geocoder'
+gem 'gmaps4rails'

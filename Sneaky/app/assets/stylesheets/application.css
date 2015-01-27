@@ -16,7 +16,72 @@
  *= require_tree .
  */
 
- .user-image {
- 	margin: 5px;
- 	
- }
+
+ #map_canvas {
+    width: 550px;
+    height: 100%;
+}
+
+#header {
+	top: 0px;
+	background-color: #4B9C46;
+	width: auto;
+	border-radius: 10px;
+	margin: 5px;
+	margin-top: 8px;
+	padding: 3px;
+	box-shadow: 3px 3px 3px 3px #ccc;
+	position: fixed;
+}
+
+.header-title {
+	font-family: "Impact";
+	margin: 5px;
+	margin-left: 10px;
+	color: white;
+}
+
+.header-description {
+	font-family: "Futura";
+	font-size: 20px;
+	margin: 5px;
+	margin-left: 10px;
+	color: white;
+}
+
+/*html, #map_canvas {
+	height: 100%;
+	overflow: auto;
+}*/
+
+#map-section {
+	position: fixed;
+	right: 0;
+	margin-right: 10px;
+	height: 100%;
+}
+
+
+
+.pictures {
+	display: inline;
+/*	width: 70%;*/
+
+}
+
+img {
+	margin: 5px;
+	    height: auto;
+    max-width: 100%;
+}
+
+/*#collection-section {
+	width: 60%;
+}
+
+#image-gallery {
+	overflow: auto;
+}*/
+
+#collection-section { overflow: scroll; width: 1000px; }
+#image-gallery { width: 1000px; }
