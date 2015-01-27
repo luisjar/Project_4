@@ -11,7 +11,7 @@
 }
 .dropzone {
   position: relative;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 2px solid rgba(0,0,0,0.08);
   background: rgba(0,0,0,0.02);
   padding: 1em;
 }
@@ -54,7 +54,7 @@
 .dropzone .dz-preview .dz-details,
 .dropzone-previews .dz-preview .dz-details {
   width: 100px;
-  height: 100px;
+  height: 50px;
   position: relative;
   background: #ebebeb;
   padding: 5px;
@@ -71,7 +71,7 @@
   top: 0;
   left: 0;
   width: 100px;
-  height: 100px;
+  height: 50px;
 }
 .dropzone .dz-preview .dz-details .dz-size,
 .dropzone-previews .dz-preview .dz-details .dz-size {
@@ -156,8 +156,8 @@
   display: block;
 }
 .dropzone {
-  border: 1px solid rgba(0,0,0,0.03);
-  min-height: 360px;
+  border: 2px solid rgba(0,0,0,0.03);
+  min-height: 50px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   background: rgba(0,0,0,0.03);
@@ -353,7 +353,7 @@
   background-image: linear-gradient(to bottom, #fafafa, #eee);
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  border: 1px solid #eee;
+  border: 2px solid #eee;
   text-decoration: none;
   display: block;
   padding: 4px 5px;

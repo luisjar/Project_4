@@ -15,11 +15,15 @@
  *= require dropzone
  *= require_tree .
  */
-
+h3, p {
+	font-family: "Futura";
+	color: #4B9C46;
+}
 
  #map_canvas {
     width: 550px;
-    height: 100%;
+    height: 800px;
+    margin-top: -8px;
 }
 
 #header {
@@ -37,7 +41,7 @@
 .header-title {
 	font-family: "Impact";
 	margin: 5px;
-	margin-left: 10px;
+	margin-left: 20px;
 	color: white;
 }
 
@@ -45,7 +49,7 @@
 	font-family: "Futura";
 	font-size: 20px;
 	margin: 5px;
-	margin-left: 10px;
+	margin-left: 20px;
 	color: white;
 }
 
@@ -71,8 +75,8 @@
 
 img {
 	margin: 5px;
-	    height: auto;
-    max-width: 100%;
+/*	    height: auto;
+    max-width: 100%;*/
 }
 
 /*#collection-section {
@@ -83,5 +87,30 @@ img {
 	overflow: auto;
 }*/
 
-#collection-section { overflow: scroll; width: 1000px; }
-#image-gallery { width: 1000px; }
+#collection-section { 
+	overflow-y: scroll; 
+	width: 1146px;
+	height: 1000px;
+	background-color: #E6E7E8;
+	margin: 0;
+}
+
+#image-gallery { 
+	/*width: 2000px; */
+	height: 2000px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#demo {
+	display:none;
+}
+
+#upload-image-section {
+	margin-top: 139px;
+	margin-left: 20px;
+	margin margin-bottom: 0;
+
+}
+
+
