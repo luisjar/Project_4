@@ -74,7 +74,9 @@ h3, p {
 }
 
 img {
-	margin: 5px;
+	margin: 35px;
+
+	width: 40%;
 /*	    height: auto;
     max-width: 100%;*/
 }
@@ -90,7 +92,7 @@ img {
 #collection-section { 
 	overflow-y: scroll; 
 	width: 1146px;
-	height: 1000px;
+	height: 800px;
 	background-color: #E6E7E8;
 	margin: 0;
 }

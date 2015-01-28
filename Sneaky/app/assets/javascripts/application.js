@@ -92,40 +92,36 @@ var App = {
 
     var addresses = [];
     var picturesForMarkers = [];
-		var divPictureLatitude = $('.pictures');
-		$.each(divPictureLatitude,function(i,val){
-			addresses.push(val.children[1].value + ", " + val.children[2].value);
-			picturesForMarkers.push(val.children[0].src);
+    var divPictureLatitude = $('.pictures');
+    $.each(divPictureLatitude, function (i, val) {
+        addresses.push(val.children[1].value + ", " + val.children[2].value);
+        picturesForMarkers.push(val.children[0].src);
 
-		});
+    });
 
-		var infowindow = new google.maps.InfoWindow();
-		var i;
+    var infowindow = new google.maps.InfoWindow();
+    var i; // I removed marker.
 
     for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location
+        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&sensor=false', null, function (data) {
+            var p = data.results[0].geometry.location;
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             var marker = new google.maps.Marker({
                 position: latlng,
                 map: map
             });
-
-
-for (var x = 0; x < picturesForMarkers.length; x++) {
-        google.maps.event.addListener(marker, 'click', (function(marker, x) {
-          return function() {
-             var content='<img src="'+ picturesForMarkers[x] +'" style="width:300px;">';
-             console.log(content);
-             infowindow.setContent(content);
-             infowindow.open(map, marker);
-            	}	
-        		})(marker, x));
-    
-}
+            // The marker has been added to the map, add the event to the marker.
+            google.maps.event.addListener(marker, 'click', (function (marker, x) {
+                return function () {
+                    var content = '<img src="' + picturesForMarkers[x] + '" style="width:300px;">';
+                    console.log(content);
+                    infowindow.setContent(content);
+                    infowindow.open(map, marker);
+                };
+            })(marker, x));
         });
-    	}
-		};
+      }
+	 };
 	}
 
 
