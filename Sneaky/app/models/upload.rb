@@ -19,5 +19,10 @@ class Upload < ActiveRecord::Base
 	def image_url
 		image.url
 	end
+
+	def address=(address)
+    # ignore address, do nothing
+	end
+
 end
 
